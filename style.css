@@ -1,0 +1,325 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:White;
+    color:blue;
+    overflow-x:hidden;
+}
+
+/* =========================
+   CUSTOM SCROLLBAR
+========================= */
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:white;
+}
+
+::-webkit-scrollbar-thumb{
+    background:grey;
+    border-radius:10px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav{
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    backdrop-filter:blur(10px);
+    background:white;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:blue;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:black;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:blue;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 10%;
+    gap:50px;
+}
+
+.hero-text h1{
+    font-size:60px;
+    line-height:1.2;
+}
+
+.hero-text span{
+    color:black;
+}
+
+.hero-text p{
+    margin:20px 0;
+    color:black;
+    max-width:500px;
+    line-height:1.8;
+}
+
+.hero-img img{
+    width:350px;
+    /* border-radius:50%; */
+    /* border:4px solid blue;
+    box-shadow:0 0 40px rgba(56,189,248,0.5); */
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:linear-gradient(135deg,#38bdf8,#8b5cf6);
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:0.4s;
+    /* box-shadow:0 0 20px rgba(56,189,248,0.4); */
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px rgba(139,92,246,0.7);
+}
+
+/* =========================
+   SECTION STYLES
+========================= */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:60px;
+    color:blue;
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+.about{
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.9;
+    color:black;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.skill-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+
+    border:1px solid black;
+}
+
+.skill-card h3{
+    margin-bottom:10px;
+}
+.skill-card p{
+    color: black;
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+    border:1px solid black;
+
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(56,189,248,0.3);
+}
+
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    margin-bottom:15px;
+    color:blue;
+}
+
+.project-content p{
+    color:black;
+    line-height:1.7;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    color:black;
+}
+
+.contact a{
+    color:blue;
+    text-decoration:none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    text-align:center;
+    padding:25px;
+    background:blue;
+    color:white;
+}
+
+/* =========================
+   GLOW EFFECTS
+========================= */
+/* .blur-circle1,
+.blur-circle2{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    z-index:-1;
+}
+
+.blur-circle1{
+    width:300px;
+    height:300px;
+    background:#38bdf8;
+    top:10%;
+    left:-100px;
+}
+
+.blur-circle2{
+    width:300px;
+    height:300px;
+    background:#8b5cf6;
+    bottom:10%;
+    right:-100px;
+} */
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:42px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:20px 5%;
+    }
+
+    .hero{
+        padding:120px 5%;
+    }
+
+    section{
+        padding:80px 5%;
+    }
+
+    .hero-img img{
+        width:50px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+}
